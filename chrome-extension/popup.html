@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Archive</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 250px;
+            padding: 15px;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 16px;
+            color: #444;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+        #status {
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            min-height: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>AI Chat Archive</h2>
+    <button id="parseBtn">Зібрати цей діалог</button>
+    <p id="status"></p>
+
+    <!-- Підключаємо логіку кнопки -->
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -31,5 +31,6 @@
   ],
   "action": {
     "default_title": "AI Archive Sync"
+    "default_popup": "popup.html"
   }
 }
