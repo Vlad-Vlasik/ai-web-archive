@@ -9,7 +9,7 @@
     "background"
   ],
   "host_permissions": [
-    "https://*.ngrok-free.app/*",
+    "https://*.ngrok-free.dev/*",
     "https://chatgpt.com/*",
     "https://gemini.google.com/*",
     "https://claude.ai/*"
@@ -30,7 +30,7 @@
     }
   ],
   "action": {
-    "default_title": "AI Archive Sync"
+    "default_title": "AI Archive Sync",
     "default_popup": "popup.html"
   }
 }
