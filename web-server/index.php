@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
@@ -17,14 +17,7 @@
         body {
             margin: 0; padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
-        }
-        /* Бокова панель (Список чатів) */
-        #sidebar {
+            background-color:         #sidebar {
             width: 300px;
             background-color: var(--sidebar-bg);
             border-right: 1px solid var(--border);
@@ -118,7 +111,7 @@
 
     <script>
         // 1. Завантаження списку чатів
-        async function loadConversations() {
+        async function loadConversations() 
             try {
                 const res = await fetch('api.php?action=get_conversations');
                 const json = await res.json();
@@ -148,37 +141,4 @@
 
         // 2. Завантаження повідомлень конкретного чату
         async function loadMessages(chatId, title) {
-            document.getElementById('chat-header').innerText = title;
-            const container = document.getElementById('messages-container');
-            container.innerHTML = '<div style="text-align:center;color:#888;">Завантаження повідомлень...</div>';
-
-            try {
-                const res = await fetch(`api.php?action=get_messages&conversation_id=${chatId}`);
-                const json = await res.json();
-
-                if(json.status !== 'success') {
-                    container.innerHTML = `<div style="color:red;">Помилка: ${json.message}</div>`;
-                    return;
-                }
-
-                container.innerHTML = '';
-                json.messages.forEach(msg => {
-                    const div = document.createElement('div');
-                    div.className = `message ${msg.role === 'user' ? 'user' : 'ai'}`;
-                    // Виводимо сирий текст. У майбутньому сюди додамо рендер Markdown!
-                    div.innerText = msg.content_raw;
-                    container.appendChild(div);
-                });
-                
-                // Автоскрол вниз
-                container.scrollTop = container.scrollHeight;
-            } catch (error) {
-                console.error("Помилка завантаження повідомлень:", error);
-            }
-        }
-
-        // Запускаємо завантаження при старті сторінки
-        window.onload = loadConversations;
-    </script>
-</body>
-</html>
+            document.getElementById('chat-header
